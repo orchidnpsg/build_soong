@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"strings"
 
-	"jdc/soong/android"
+	"aim/soong/android_aim"
 
 	"github.com/google/blueprint/proptools"
 )
@@ -97,8 +97,8 @@ type variableProperties struct {
 			Enabled *bool
 		}
 
-		// include JDC variables
-		JDC android.Product_variables
+		// include Aim variables
+		Aim android_aim.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -173,8 +173,8 @@ type productVariables struct {
 
 	DeviceKernelHeaders []string `json:",omitempty"`
 
-	// include JDC variables
-	JDC android.ProductVariables
+	// include Aim variables
+	Aim android_aim.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
